@@ -49,6 +49,7 @@ public class UserBean {
 								errorMessage, null));
 				return null;
 			}
+			userEntity.setIsAdmin(true);
 			loggedInUser = userSessionService.createUser(userEntity);
 			HttpSession httpSession = (HttpSession) FacesContext
 					.getCurrentInstance().getExternalContext()
