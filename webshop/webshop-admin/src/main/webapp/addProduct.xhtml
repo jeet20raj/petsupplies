@@ -7,8 +7,6 @@
 	<ui:define name="content">
 
 		<h:form enctype="multipart/form-data">
-			<!-- <h:messages infoClass="info" errorClass="error" /> -->
-			<h:messages styleClass="error"/>
 			<p:panel id="panel" header="Add Product Screen"
 				style="margin-bottom:10px;">
 				<h:panelGrid columns="3">
@@ -19,7 +17,8 @@
 
 					<h:outputLabel for="categoryId"
 						value="#{message['webshop.selectcategory']}" />
-					<p:selectOneMenu id="categoryId" value="#{productBean.categoryId}">
+					<p:selectOneMenu id="categoryId" value="#{productBean.categoryId}" required="true">
+					    <f:selectItem itemLabel="Select category" itemValue="#{null}"></f:selectItem>
 						<f:selectItems value="#{productBean.productCategories}"
 							var="category" itemLabel="#{category.categoryName}"
 							itemValue="#{category.categoryId}" />
