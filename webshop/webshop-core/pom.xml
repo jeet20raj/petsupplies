@@ -9,7 +9,7 @@
   </parent>
   <groupId>com.petsupplies.websop</groupId>
   <artifactId>core</artifactId>
-  <version>1.0</version>
+  <version>1.0.0</version>
   <name>core</name>
   <packaging>jar</packaging>
   <properties>
