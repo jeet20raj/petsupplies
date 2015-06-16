@@ -7,7 +7,11 @@ import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
-
+/**
+ * 
+ * @author Jeetendra
+ * AbstractJPAEntity is used to have all the common columns
+ */
 @MappedSuperclass
 public class AbstractJPAEntity implements Serializable{
   private Date updatedDate;
