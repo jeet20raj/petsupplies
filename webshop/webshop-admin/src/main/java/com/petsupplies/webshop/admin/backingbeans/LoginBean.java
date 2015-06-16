@@ -15,7 +15,12 @@ import com.example.petsupplies.core.backend.entity.UserEntity;
 import com.example.petsupplies.core.service.UserSessionService;
 import com.petsupplies.webshop.admin.model.LoginForm;
 import com.petsupplies.webshop.admin.qualifiers.UserLoggedIn;
-
+/**
+ * Login bean is backing bean to get data from page and use data for user login
+ * @author Jeetendra
+ * @version 1.0
+ * @since 2015-06-14
+ */
 @Named
 @SessionScoped
 public class LoginBean implements Serializable {
@@ -30,7 +35,14 @@ public class LoginBean implements Serializable {
 
   @Inject
   private transient Logger logger;
-
+ /**
+   * Capture the user name and password from Screen and pass
+   * user name and pass word for authentication
+   *
+   * @param 
+   * @return      the page view for navigation
+   * @see         Home page
+   */
   public String login() {
     String viewPage=null;
     logger.log(Level.INFO, "LoginBean :: login starts");
@@ -53,7 +65,13 @@ public class LoginBean implements Serializable {
     logger.log(Level.INFO, "LoginBean :: login ends");
     return viewPage;
   }
-  
+  /**
+   * Logout the logged in user
+   *
+   * @param 
+   * @return      the page view for navigation
+   * @see         Login page
+   */
   public String logout() {
     String viewPage="login";
     logger.log(Level.INFO, "LoginBean :: logout starts");
@@ -64,7 +82,10 @@ public class LoginBean implements Serializable {
     logger.log(Level.INFO, "LoginBean :: logout ends");
     return viewPage;
   }
-
+/**
+   * Used to produce the logged in user to be injected into other bean
+   * @return      User logged into the system
+   */
   @Produces
   @UserLoggedIn
   UserEntity getLoggedInUser() {
