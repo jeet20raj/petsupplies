@@ -15,7 +15,12 @@ import com.example.petsupplies.core.backend.entity.UserEntity;
 import com.example.petsupplies.core.common.constants.Constants;
 import com.example.petsupplies.core.exceptions.WebshopException;
 import com.example.petsupplies.core.service.UserSessionService;
-
+/**
+ * User bean is backing bean which captured user details from the Registration page and create new User into the system
+ * @author Jeetendra
+ * @version 1.0
+ * @since 2015-06-14
+ */
 @Named
 @RequestScoped
 public class UserBean {
@@ -32,7 +37,12 @@ public class UserBean {
 
 	@Inject
 	private transient Logger logger;
-
+/**
+	   * Capture the the user details to create new user
+	   * @param 
+	   * @return      the page view for navigation
+	   * @see         Home page
+	   */
 	public String createUser() {
 		logger.log(Level.INFO, "UserBean :: createUser starts");
 		try {
