@@ -27,6 +27,13 @@ import com.petsupplies.webshop.admin.ProductHolder;
 import com.petsupplies.webshop.admin.model.ProductVO;
 import com.petsupplies.webshop.admin.qualifiers.UserLoggedIn;
 
+/**
+ * Product bean is backing bean which is used to display/add/edit/delete products
+ * @author Jeetendra
+ * @version 1.0
+ * @since 2015-06-14
+ */
+
 @SuppressWarnings("serial")
 @Named
 @ConversationScoped
@@ -69,7 +76,12 @@ public class ProductBean implements Serializable {
 	private List<ProductEntity> productsList;
 
 	private ProductVO selectedProductVO;
-
+	/**
+	   * Capture product details from product screen and create new product
+	   * @param 
+	   * @return      the page view for navigation
+	   * @see         show products page with list of projects
+	   */
 	public String createProduct() {
 		logger.log(Level.INFO,"ProductBean :: createProduct method starts");
 		try {
@@ -93,7 +105,12 @@ public class ProductBean implements Serializable {
 		logger.log(Level.INFO,"ProductBean :: createProduct method ends");
 		return "showProducts";
 	}
-
+	/**
+	   * Navigate to product screen to edit the product and prepares the list of categories to dispaly in product screen.
+	   * @param 
+	   * @return      the page view for navigation.
+	   * @see         Product screen.
+	   */
 	public String showPordEditPage() {
 		logger.log(Level.INFO,"ProductBean :: showPordEditPage method starts");
 		if (null != getSelectedProductVO()) {
@@ -108,7 +125,12 @@ public class ProductBean implements Serializable {
 		logger.log(Level.INFO,"ProductBean :: showPordEditPage method ends");
 		return null;
 	}
-
+	/**
+	   * Edit the product.
+	   * @param 
+	   * @return      the page view for navigation.
+	   * @see         Products list screen
+	   */
 	public String editProduct() {
 		logger.log(Level.INFO,"ProductBean :: editProduct method starts");
 		if (null != getSelectedProductVO().getProductEntity()) {
@@ -125,7 +147,12 @@ public class ProductBean implements Serializable {
 		}
 		return null;
 	}
-
+	/**
+	   * Delete the product.
+	   * @param 
+	   * @return      the page view for navigation.
+	   * @see         Products list screen
+	   */
 	public String deleteProduct() {
 		logger.log(Level.INFO,"ProductBean :: deleteProduct method starts");
 		if (null != getSelectedProductVO()) {
@@ -144,13 +171,23 @@ public class ProductBean implements Serializable {
 		}
 		return null;
 	}
-
+	/**
+	   * Navigate to product screen to add the product and prepares the list of categories to dispaly in product screen.
+	   * @param 
+	   * @return      the page view for navigation.
+	   * @see         Product screen.
+	   */
 	public String showProductPage() {
 		productCategories = categorySessionService.getCategories();
 		startConversation();
 		return "addProduct";
 	}
-
+	/**
+	   * Navigate to products list screen.
+	   * @param 
+	   * @return      the page view for navigation.
+	   * @see         Products list screen.
+	   */
 	public String showAllProducts() {
 		List<ProductVO> products = new ArrayList<ProductVO>();
 		productsList = productSessionService.getAllProducts();
