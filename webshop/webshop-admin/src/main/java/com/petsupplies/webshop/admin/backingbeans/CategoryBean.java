@@ -18,6 +18,13 @@ import com.example.petsupplies.core.service.CategorySessionService;
 import com.petsupplies.webshop.admin.CategoryHolder;
 import com.petsupplies.webshop.admin.model.CategoryVO;
 
+/**
+ * Category bean is backing bean which is used to display/add/soft delete categories
+ * @author Jeetendra
+ * @version 1.0
+ * @since 2015-06-14
+ */
+
 @Named
 @RequestScoped
 public class CategoryBean {
@@ -37,7 +44,12 @@ public class CategoryBean {
 
 	@Inject
 	private transient Logger logger;
-
+	/**
+	   * Capture category details from category screen and create new category.
+	   * @param 
+	   * @return      the page view for navigation.
+	   * @see         home page
+	   */
 	public String createCategory() {
 		logger.log(Level.INFO, "CategoryBean :: createCategory method called");
 		try {
@@ -47,7 +59,12 @@ public class CategoryBean {
 		}
 		return "adminHome";
 	}
-
+	/**
+	   * Return list of categories
+	   * @param 
+	   * @return      the page view for navigation.
+	   * @see         page with list of categories.
+	   */
 	public String getAllCategories() {
 		List<CategoryEntity> categoryEntities = categorySessionService
 				.getCategories();
@@ -56,7 +73,12 @@ public class CategoryBean {
 		categoryHolder.setCategoryVOs(categoryVOs);
 		return "showCategories";
 	}
-
+	/**
+	   * Delete category from DB
+	   * @param 
+	   * @return      the page view for navigation.
+	   * @see         page with list of categories.
+	   */
 	public String deleteCategory() {
 		logger.log(Level.INFO, "CategoryBean :: deleteCategory method starts");
 		if (null != getSelectedCategoryVO()) {
@@ -91,7 +113,11 @@ public class CategoryBean {
 		logger.log(Level.INFO, "CategoryBean :: deleteCategory method ends");
 		return null;
 	}
-
+	/**
+	   * Prepares the decorated list of Products VO to display the Data table
+	   * @param 
+	   * @return
+	   */
 	private void makeProductVOList(List<CategoryEntity> categoryEntities,
 			List<CategoryVO> categoryVOs) {
 		for (CategoryEntity categoryEntity : categoryEntities) {
