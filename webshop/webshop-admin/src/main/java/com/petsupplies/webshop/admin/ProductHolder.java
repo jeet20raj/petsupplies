@@ -8,6 +8,13 @@ import javax.inject.Named;
 
 import com.petsupplies.webshop.admin.model.ProductVO;
 
+/**
+ * ProductHolder holds the list of products to be displayed in Data table.
+ * @author Jeetendra
+ * @version 1.0
+ * @since 2015-06-14
+ */
+
 @Named("productsHolder")
 @SessionScoped
 public class ProductHolder implements Serializable {
