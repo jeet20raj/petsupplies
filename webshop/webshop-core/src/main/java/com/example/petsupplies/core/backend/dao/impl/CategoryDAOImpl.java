@@ -12,9 +12,17 @@ import com.example.petsupplies.core.backend.dao.BaseDAO;
 import com.example.petsupplies.core.backend.dao.CategoryDAO;
 import com.example.petsupplies.core.backend.entity.CategoryEntity;
 import com.example.petsupplies.core.common.constants.Constants;
-
+/**
+ * 
+ * @author Jeetendra
+ * CategoryDAOImpl is used to call the operations related to category
+ */
 public class CategoryDAOImpl extends BaseDAO implements CategoryDAO {
-
+/**
+	 * @param
+	 * @return returns the list of product categories This method is used to
+	 *         register user into application
+	 */
 	public List<CategoryEntity> getCategories() {
 		logger.log(Level.INFO, "CategoryDAOImpl getCategories Method Starts");
 		TypedQuery<CategoryEntity> queryResults = entityManager
@@ -34,7 +42,11 @@ public class CategoryDAOImpl extends BaseDAO implements CategoryDAO {
 		}
 		return new ArrayList<CategoryEntity>();
 	}
-
+/**
+	 * @param category
+	 * @return boolean 
+	 * This method is used to create product category
+	 */
 	public boolean createCategory(CategoryEntity categoryEntity){
 		logger.log(Level.INFO, "CategoryDAOImpl getCategories Method Starts");
 		try {
@@ -48,7 +60,11 @@ public class CategoryDAOImpl extends BaseDAO implements CategoryDAO {
 
 		return false;
 	}
-
+/**
+	 * @param category
+	 * @return boolean
+	 * This method is used to edit the product category
+	 */
 	public boolean editCategory(CategoryEntity categoryEntity) {
 		logger.log(Level.INFO,"CategoryDAOImpl :: edit category method called");
 	    try {
