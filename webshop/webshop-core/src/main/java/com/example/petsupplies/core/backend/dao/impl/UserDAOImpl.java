@@ -11,9 +11,17 @@ import com.example.petsupplies.core.backend.dao.UserDAO;
 import com.example.petsupplies.core.backend.entity.UserEntity;
 import com.example.petsupplies.core.common.constants.Constants;
 import com.example.petsupplies.core.exceptions.WebshopException;
-
+/**
+ * 
+ * @author Jeetendra
+ *
+ */
 public class UserDAOImpl extends BaseDAO implements UserDAO {
-
+/**
+   * @param user name and password
+   * @return user
+   * This method is used for user login based in user name and password
+   */
   public UserEntity login(String userName, String password) {
     logger.info("UserDAOImpl :: create method starts");
     TypedQuery<UserEntity> queryResults =
@@ -31,7 +39,11 @@ public class UserDAOImpl extends BaseDAO implements UserDAO {
 	}
     return null;
   }
-
+/**
+   * @param user
+   * @return user
+   * This method is used to register user into application
+   */
   public UserEntity createUser(UserEntity userEntity) {
     logger.info("UserDAOImpl :: create method starts");
     TypedQuery<UserEntity> queryResults =
