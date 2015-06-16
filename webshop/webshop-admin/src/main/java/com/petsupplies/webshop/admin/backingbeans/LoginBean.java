@@ -6,6 +6,7 @@ import java.util.logging.Logger;
 
 import javax.enterprise.context.SessionScoped;
 import javax.enterprise.inject.Produces;
+import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -52,7 +53,7 @@ public class LoginBean implements Serializable {
       loggedInUser =
           userSessionService.login(loginForm.getUserName(), loginForm.getPassword());
       httpSession.setAttribute("userLogedIn", loggedInUser);
-      viewPage = "adminHome";
+      
     }else{
       loggedInUser =
           (UserEntity)httpSession.getAttribute("userLogedIn");
@@ -60,7 +61,8 @@ public class LoginBean implements Serializable {
     if (null != loggedInUser) {
       viewPage = "adminHome";
     } else {
-      loginForm.setMessage("Invalid user name passowrd");
+      String errorMessage = FacesContext.getCurrentInstance().getApplication().getResourceBundle(FacesContext.getCurrentInstance(),"message").getString("webshop.errmsg.invalidlogin");
+		  FacesContext.getCurrentInstance().addMessage(null,new FacesMessage(FacesMessage.SEVERITY_ERROR,errorMessage, null));
     }
     logger.log(Level.INFO, "LoginBean :: login ends");
     return viewPage;
