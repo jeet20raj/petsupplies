@@ -8,6 +8,13 @@ import javax.inject.Named;
 
 import com.petsupplies.webshop.admin.model.CategoryVO;
 
+/**
+ * CategoryHolder holds the list of categories to be displayed in Data table.
+ * @author Jeetendra
+ * @version 1.0
+ * @since 2015-06-14
+ */
+
 @Named("categoriesHolder")
 @SessionScoped
 public class CategoryHolder implements Serializable{
