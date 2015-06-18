@@ -39,8 +39,8 @@ import com.petsupplies.webshop.admin.qualifiers.UserLoggedIn;
 @ConversationScoped
 public class ProductBean implements Serializable {
 
-	private @Inject
-	Conversation conversation;
+	@Inject
+	private Conversation conversation;
 
 	@Named
 	@RequestScoped
