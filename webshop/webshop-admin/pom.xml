@@ -30,7 +30,7 @@
 	</build>
 	<dependencies>
 		<dependency>
-			<groupId>com.petsupplies.websop</groupId>
+			<groupId>com.petsupplies.webshop</groupId>
 			<artifactId>core</artifactId>
 			<version>1.0.0</version>
 		</dependency>
