@@ -7,7 +7,7 @@
     <artifactId>webshop</artifactId>
     <version>1.0</version>
   </parent>
-  <groupId>com.petsupplies.websop</groupId>
+  <groupId>com.petsupplies.webshop</groupId>
   <artifactId>core</artifactId>
   <version>1.0.0</version>
   <name>core</name>
