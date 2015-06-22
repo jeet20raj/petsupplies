@@ -14,20 +14,21 @@ import com.example.petsupplies.core.backend.entity.ProductEntity;
 import com.example.petsupplies.core.common.constants.Constants;
 import com.example.petsupplies.core.model.ProductSearchFilter;
 /**
- * 
  * @author Jeetendra
- * ProductDAOImpl is used to call the operations related to product.
+ * ProductDAOImpl is used add/edit/delete/display product
  */
 public class ProductDAOImpl extends BaseDAO implements ProductDAO {
 
+  /**
+	   * @param ProductSearchFilter
+	   * @return list of products
+	   */
   public List<ProductEntity> getProducts(ProductSearchFilter searchFilter) {
     
     return new ArrayList<ProductEntity>();
   }
 /**
-   * @param user name and password
    * @return list of products
-   * This method is used for user login based in user name and password
    */
   public List<ProductEntity> getAllProducts() {
     logger.info("ProductDAOImpl :: getAllProducts method called");
