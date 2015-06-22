@@ -10,7 +10,10 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 import com.example.petsupplies.core.common.constants.Constants;
-
+/**
+ * @author Jeetendra
+ * CategoryEntity is used to define all attributes related product categories.
+ */
 @SuppressWarnings("serial")
 @Entity
 @Table(name = "product_categories")
