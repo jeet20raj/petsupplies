@@ -1,5 +1,8 @@
 package com.example.petsupplies.core.exceptions;
-
+/**
+ * @author Jeetendra
+ * WebshopException is wrapping the system exception to application specific exception.
+ */
 @SuppressWarnings("serial")
 public class WebshopException extends RuntimeException {
   
