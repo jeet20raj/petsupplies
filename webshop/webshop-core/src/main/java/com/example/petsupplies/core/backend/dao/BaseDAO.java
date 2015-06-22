@@ -6,9 +6,8 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 
 /**
- * @param product
- * @return boolean
- * This method is used to edit product from the DB
+ * @author Jeetendra
+ * BaseDAO is abstract class having EntityManager and Logger to be used in All DAO classes extending it.
  */
 public abstract class BaseDAO {
   @Inject
