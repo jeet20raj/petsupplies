@@ -15,13 +15,12 @@ import com.example.petsupplies.core.common.constants.Constants;
 /**
  * 
  * @author Jeetendra
- * CategoryDAOImpl is used to call the operations related to category
+ * CategoryDAOImpl is used to add/edit/delete/display category
  */
 public class CategoryDAOImpl extends BaseDAO implements CategoryDAO {
 /**
 	 * @param
-	 * @return returns the list of product categories This method is used to
-	 *         register user into application
+	 * @return returns the list of product categories.
 	 */
 	public List<CategoryEntity> getCategories() {
 		logger.log(Level.INFO, "CategoryDAOImpl getCategories Method Starts");
