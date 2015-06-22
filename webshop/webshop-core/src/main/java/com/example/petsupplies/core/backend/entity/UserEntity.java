@@ -11,7 +11,10 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 
 import org.hibernate.annotations.Type;
-
+/**
+ * @author Jeetendra
+ * UserEntity is used to define all attributes related User.
+ */
 @SuppressWarnings("serial")
 @Entity
 @Table(name = "webshop_users")
