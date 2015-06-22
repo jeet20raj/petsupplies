@@ -8,7 +8,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.Table;
-
+/**
+ * @author Jeetendra
+ * AddressEntity is used to define all address related attributes.
+ */
 @Entity
 @Table(name = "user_address")
 public class AddressEntity extends AbstractJPAEntity {
