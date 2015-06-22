@@ -12,9 +12,8 @@ import com.example.petsupplies.core.backend.entity.UserEntity;
 import com.example.petsupplies.core.common.constants.Constants;
 import com.example.petsupplies.core.exceptions.WebshopException;
 /**
- * 
  * @author Jeetendra
- *
+ * UserDAOImpl is used to search user in DB and create user.
  */
 public class UserDAOImpl extends BaseDAO implements UserDAO {
 /**
