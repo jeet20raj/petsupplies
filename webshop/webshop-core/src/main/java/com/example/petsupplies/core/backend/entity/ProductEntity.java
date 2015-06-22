@@ -15,7 +15,10 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 
 import com.example.petsupplies.core.common.constants.Constants;
-
+/**
+ * @author Jeetendra
+ * ProductEntity is used to define all attributes related product.
+ */
 @Entity
 @Table(name = "products")
 @NamedQueries({@NamedQuery(name = Constants.QueryConstants.SHOW_ALL_PRODUCTS,
