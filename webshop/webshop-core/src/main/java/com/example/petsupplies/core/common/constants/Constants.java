@@ -1,5 +1,8 @@
 package com.example.petsupplies.core.common.constants;
-
+/**
+ * @author Jeetendra
+ * Constants is used to define all constants to be used across the application.
+ */
 public interface Constants {
   public interface QueryConstants{
     public static final String FIND_USER = "findUser";
