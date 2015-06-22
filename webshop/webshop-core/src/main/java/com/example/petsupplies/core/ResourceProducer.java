@@ -6,7 +6,10 @@ import javax.enterprise.inject.Produces;
 import javax.enterprise.inject.spi.InjectionPoint;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-
+/**
+ * @author Jeetendra ResourceProducer is used to produces Entity Manager and
+ *         Logger so that those can be injected by other classes.
+ */
 public class ResourceProducer {
 
   @Produces
