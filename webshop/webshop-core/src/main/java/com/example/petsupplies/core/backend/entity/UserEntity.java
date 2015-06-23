@@ -66,7 +66,7 @@ public class UserEntity extends AbstractJPAEntity{
     this.userName = userName;
   }
 
-  @Column(name="first_name",length=150,unique=true)
+  @Column(name="first_name",length=150)
   public String getFirstName() {
     return firstName;
   }
@@ -75,7 +75,7 @@ public class UserEntity extends AbstractJPAEntity{
     this.firstName = firstName;
   }
   
-  @Column(name="last_name",length=150,unique=true)
+  @Column(name="last_name",length=150)
   public String getLastName() {
     return lastName;
   }
